@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 // import * as ordersAPI from '../../utilities/orders-api';
 // import './ShopPage.css';
-import { Link } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import CatalogueList from '../../components/CatalogueList/CatalogueList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
@@ -56,24 +54,20 @@ export default function ShopPage({ user, setUser }) {
 
 
   return (
-    <main className="ShopPage">
+    <>
       <aside>
-        <Logo />
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
       </aside>
+      <main>
       <CatalogueList
         catalogueItems={catalogueItems.filter(item => item.category.name === activeCat)}
-        // handleAddToOrder={handleAddToOrder}
-      />
-      {/* <OrderDetail
-        order={cart}
-        handleChangeQty={handleChangeQty}
-        handleCheckout={handleCheckout}
-      /> */}
-    </main>
+        // handleAddToOrder={handleAddToOrder} 
+        />
+      </main>
+      </>
   );
 }

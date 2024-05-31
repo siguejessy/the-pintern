@@ -16,10 +16,10 @@ export default function NavBar({ user, setUser }) {
 
       <div>
         <Link to="/shop">Shop</Link>
-        &nbsp; | &nbsp;
-        <Link to="/orders">Orders</Link>
         &nbsp; | &nbsp; 
         <Link to="/about">About</Link>
+        &nbsp; | &nbsp;
+        <Link to="/contact">Contact</Link>
         {user ? (
           <>
             &nbsp; | &nbsp;
