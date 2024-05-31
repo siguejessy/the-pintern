@@ -7,6 +7,9 @@ import ShopPage from '../ShopPage/ShopPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
+import CataloguePage from '../CataloguePage/CataloguePage';
+import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+
 
 
 export default function App() {
@@ -20,8 +23,14 @@ export default function App() {
       <Routes>
           <Route path="/" element={<ShopPage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/about" element={<AboutPage />} /> 
-          <Route path="/contact" element={<ContactPage />} /> 
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/catalogue" element={<CataloguePage />} />
+          <Route path="/catalogue/:id" element={<ItemDetailPage />} />
+          <Route path="/login" element={<AuthPage setUser={ setUser } />} />
+          <Route path="/signup" element={<AuthPage setUser={ setUser } />} />
+
+          
       </Routes>
       </>
       </header>

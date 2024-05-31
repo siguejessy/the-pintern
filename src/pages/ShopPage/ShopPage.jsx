@@ -7,7 +7,7 @@ import Logo from '../../components/Logo/Logo';
 import CatalogueList from '../../components/CatalogueList/CatalogueList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
+
 
 export default function ShopPage({ user, setUser }) {
   const [catalogueItems, setCatalogueItems] = useState([]);
@@ -64,8 +64,6 @@ export default function ShopPage({ user, setUser }) {
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
-        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-        <UserLogOut user={user} setUser={setUser} />
       </aside>
       <CatalogueList
         catalogueItems={catalogueItems.filter(item => item.category.name === activeCat)}
