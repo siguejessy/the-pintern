@@ -1,31 +1,32 @@
 import { useState, useEffect, useRef } from 'react';
-// import * as itemsAPI from '../../utilities/items-api';
+import * as itemsAPI from '../../utilities/items-api';
 // import * as ordersAPI from '../../utilities/orders-api';
-// import './NewOrderPage.css';
-import { Link, useNavigate } from 'react-router-dom';
-// import Logo from '../../components/Logo/Logo';
-// import MenuList from '../../components/MenuList/MenuList';
-// import CategoryList from '../../components/CategoryList/CategoryList';
+// import './ShopPage.css';
+import { Link } from 'react-router-dom';
+import Logo from '../../components/Logo/Logo';
+import CatalogueList from '../../components/CatalogueList/CatalogueList';
+import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
-// import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
-export default function NewOrderPage({ user, setUser }) {
-  // const [menuItems, setMenuItems] = useState([]);
-  // const [activeCat, setActiveCat] = useState('');
+export default function ShopPage({ user, setUser }) {
+  const [catalogueItems, setCatalogueItems] = useState([]);
+  const [activeCat, setActiveCat] = useState('');
+  const categoriesRef = useRef([]);
+  const subCategoriesRef = useRef([]);
   // const [cart, setCart] = useState(null);
-  // const categoriesRef = useRef([]);
   // const navigate = useNavigate();
 
-  // // The empty dependency array causes the effect
-  // // to run ONLY after the FIRST render
-  // useEffect(function() {
-  //   async function getItems() {
-  //     const items = await itemsAPI.getAll();
-  //     categoriesRef.current = [...new Set(items.map(item => item.category.name))];
-  //     setMenuItems(items);
-  //     setActiveCat(categoriesRef.current[0]);
-  //   }
-  //   getItems();
+  useEffect(function() {
+    async function getItems() {
+      const items = await itemsAPI.getAll();
+      categoriesRef.current = [...new Set(items.map(item => item.category.name))];
+      subCategoriesRef.current = [...new Set(items.map(item => item.subCategory.name))];
+      setCatalogueItems(items);
+      setActiveCat(categoriesRef.current[0]);
+    }
+    getItems();
+  }, []);
 
   //   // Load cart (a cart is the unpaid order for the logged in user)
   //   async function getCart() {
@@ -55,8 +56,8 @@ export default function NewOrderPage({ user, setUser }) {
 
 
   return (
-    <main className="NewOrderPage">
-      {/* <aside>
+    <main className="ShopPage">
+      <aside>
         <Logo />
         <CategoryList
           categories={categoriesRef.current}
@@ -66,11 +67,11 @@ export default function NewOrderPage({ user, setUser }) {
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      <MenuList
-        menuItems={menuItems.filter(item => item.category.name === activeCat)}
-        handleAddToOrder={handleAddToOrder}
+      <CatalogueList
+        catalogueItems={catalogueItems.filter(item => item.category.name === activeCat)}
+        // handleAddToOrder={handleAddToOrder}
       />
-      <OrderDetail
+      {/* <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}

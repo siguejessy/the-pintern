@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
-import { useState } from "react";
 import "./NavBar.css";
 
 // had to jettison the search bar and category pages for now, but keeping the code for future reference
