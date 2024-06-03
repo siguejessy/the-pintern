@@ -1,10 +1,9 @@
-import './Logo.css';
+import '../../assets/Logo_cropped.png';
 
 export default function Logo() {
   return (
     <div className="Logo">
-      <div>The</div>
-      <div>Pintern</div>
+      <img src="../../assets/Logo_cropped.png" alt="The Pintern" />
     </div>
   );
 }

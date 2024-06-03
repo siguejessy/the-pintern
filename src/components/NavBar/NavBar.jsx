@@ -57,6 +57,7 @@
 */
 import { Fragment, useState } from 'react'
 import * as userService from '../../utilities/users-service'
+import Logo from '../../assets/Logo_cropped.png'
 import {
   Dialog,
   DialogPanel,
@@ -73,6 +74,7 @@ import {
   TransitionChild,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+
 
 const navigation = {
   pages: [
@@ -189,7 +191,7 @@ export default function NavBar( { user, setUser}) {
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
-                    src="../../../public/Logo_cropped.png"
+                    src={Logo}
                     alt=""
                   />
                 </a>
