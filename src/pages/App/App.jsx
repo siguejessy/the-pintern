@@ -7,6 +7,7 @@ import ShopPage from '../ShopPage/ShopPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
+import Header from '../../components/Header/Header';
 import CataloguePage from '../CataloguePage/CataloguePage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 
@@ -17,7 +18,7 @@ export default function App() {
 
   return (
     <main className="App">
-    <header className="App-header">
+    <Header />
       <NavBar user={ user } setUser={ setUser } />
       <>
       <Routes>
@@ -29,11 +30,8 @@ export default function App() {
           <Route path="/catalogue/:id" element={<ItemDetailPage />} />
           <Route path="/login" element={<AuthPage setUser={ setUser } />} />
           <Route path="/signup" element={<AuthPage setUser={ setUser } />} />
-
-          
       </Routes>
       </>
-      </header>
     </main>
   );
 }
