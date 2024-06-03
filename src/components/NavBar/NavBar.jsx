@@ -145,12 +145,12 @@ export default function NavBar( { user, setUser}) {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a href="/authPage" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                    <a href="/login" className="-m-2 block p-2 font-medium text-gray-900">
+                      Log in
                     </a>
                   </div>
                   <div className="flow-root">
-                    <a href="/authPage" className="-m-2 block p-2 font-medium text-gray-900">
+                    <a href="/signup" className="-m-2 block p-2 font-medium text-gray-900">
                       Create account
                     </a>
                   </div>
@@ -165,7 +165,9 @@ export default function NavBar( { user, setUser}) {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+          The Pintern's on break
+          <br />
+          & The shop is closed! 🔐
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -183,11 +185,11 @@ export default function NavBar( { user, setUser}) {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <a href="/shop">
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    src="../../../public/Logo_cropped.png"
                     alt=""
                   />
                 </a>
@@ -210,11 +212,11 @@ export default function NavBar( { user, setUser}) {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                  <a href="login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                    Log in
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href="signup" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create account
                   </a>
                 </div>
@@ -230,7 +232,7 @@ export default function NavBar( { user, setUser}) {
                 </div>
 
                 {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
+                {/* <div className="ml-4 flow-root lg:ml-6">
                   <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -239,7 +241,7 @@ export default function NavBar( { user, setUser}) {
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
         </nav>
