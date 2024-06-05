@@ -137,7 +137,7 @@ export default function NavBar( { user, setUser}) {
                 {/* Links */}
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
+                    <div key={page.name} className="flow-root px-4 py-6">
                       <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
                         {page.name}
                       </a>
@@ -157,8 +157,6 @@ export default function NavBar( { user, setUser}) {
                     </a>
                   </div>
                 </div>
-
-           
               </DialogPanel>
             </TransitionChild>
           </div>
@@ -186,11 +184,11 @@ export default function NavBar( { user, setUser}) {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex lg:ml-0 pr-6 pt-8">
                 <a href="/shop">
-                  <span className="sr-only">Your Company</span>
+                  <span className="sr-only">The Pintern</span>
                   <img
-                    className="h-8 w-auto"
+                    className="h-16 w-auto"
                     src={Logo}
                     alt=""
                   />
@@ -204,7 +202,7 @@ export default function NavBar( { user, setUser}) {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      className="hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
                     </a>

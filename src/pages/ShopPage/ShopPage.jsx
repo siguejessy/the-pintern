@@ -64,7 +64,7 @@ export default function ShopPage({ user, setUser }) {
       </aside>
       <main>
       <CatalogueList
-        catalogueItems={catalogueItems.filter(item => item.category.name === activeCat)}
+        Items={catalogueItems.filter(item => item.category.name === activeCat)}
         // handleAddToOrder={handleAddToOrder} 
         />
       </main>

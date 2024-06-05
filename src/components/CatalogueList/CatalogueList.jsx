@@ -1,8 +1,8 @@
 import './CatalogueList.css';
 import CatalogueListItem from '../CatalogueListItem/CatalogueListItem';
 
-export default function CatalogueList({ catalogueItems, handleViewDetails }) {
-  const items = catalogueItems.map(item =>
+export default function CatalogueList({ Items, handleViewDetails }) {
+  const items = Items.map(item =>
     <CatalogueListItem
       key={item._id}
       catalogueItem={item}

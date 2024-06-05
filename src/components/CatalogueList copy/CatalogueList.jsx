@@ -1,11 +1,11 @@
 import './CatalogueList.css';
-import CatalogueListItem from '../CatalogueItemCard/CatalogueListItem';
+import ItemCard from '../CatalogueItemCard/CatalogueListItem';
 
-export default function CatalogueList({ catalogueItems, handleViewDetails }) {
-  const items = catalogueItems.map(item =>
-    <CatalogueListItem
+export default function CatalogueList({ Items, handleViewDetails }) {
+  const items = Items.map(item =>
+    <ItemCard
       key={item._id}
-      catalogueItem={item}
+      Item={item}
       handleViewDetails={handleViewDetails}
     />
   );
