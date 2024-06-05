@@ -202,7 +202,7 @@ export default function NavBar( { user, setUser}) {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="hidden md:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
+                      className="hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
                     </a>
