@@ -5,6 +5,7 @@ import * as itemsAPI from '../../utilities/items-api';
 import CatalogueList from '../../components/CatalogueList/CatalogueList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import ItemCard from '../../components/CatalogueListItem/CatalogueListItem';
 
 
 export default function ShopPage({ user, setUser }) {
@@ -63,9 +64,8 @@ export default function ShopPage({ user, setUser }) {
         />
       </aside>
       <main>
-      <CatalogueList
+      <ItemCard
         Items={catalogueItems.filter(item => item.category.name === activeCat)}
-        // handleAddToOrder={handleAddToOrder} 
         />
       </main>
       </>
