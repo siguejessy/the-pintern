@@ -29,7 +29,7 @@ export default function ItemCard({ item }) {
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{item.color_variants}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{item.price}</p>
+                <p className="text-sm font-medium text-gray-900">{item.price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</p>
               </div>
             </div>
           ))}

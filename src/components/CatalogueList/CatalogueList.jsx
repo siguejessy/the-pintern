@@ -16,19 +16,23 @@
 //   );
 // }
 
-import './CatalogueList.css';
-import ItemCard from '../CatalogueListItem/CatalogueListItem';
 
-export default function CatalogueList( { Items }) {
-  const items = Items.map(item =>
-    <ItemCard
-      key={item._id}
-      Item={item}
-    />
-  );
-  return (
-    <main className="CategoryList">
-      {items}
-    </main>
-  );
-}
+
+
+
+// import './CatalogueList.css';
+// import ItemCard from '../CatalogueListItem/CatalogueListItem';
+
+// export default function CatalogueList( { Items }) {
+//   const items = Items.map(item =>
+//     <ItemCard
+//       key={item._id}
+//       Item={item}
+//     />
+//   );
+//   return (
+//     <main className="CategoryList">
+//       {items}
+//     </main>
+//   );
+// }
