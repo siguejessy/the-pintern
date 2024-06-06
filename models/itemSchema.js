@@ -5,7 +5,7 @@ const itemSchema = new Schema({
   emoji: String,
   category: {type: Schema.Types.ObjectId, ref: 'Category'},
   subCategory: [{type: Schema.Types.ObjectId, ref: 'SubCategory'}],
-  price: { type: Number, required: true },
+  price: { type: String, required: true },
   color_variants: [{ type: String }],
   description: String,
   materials: String,
