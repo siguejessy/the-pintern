@@ -23,15 +23,17 @@ const items = [
     color_variants: ["red", "black"],
     category: categories[0]._id,
     subCategory: subCategories[0]._id,
-    photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/maktub-black.jpg"
+    photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/maktub-black.jpg",
+    photo_1: ""
   },
-
+  
   {
     name: "Daughter of an Immigrant Pin",
     price: 12,
     category: categories[0]._id,
     subCategory: [subCategories[0]._id, subCategories[2]._id],
-    photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/daughter-of-an-immigrant.JPG"
+    photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/daughter-of-an-immigrant.JPG",
+    photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/daughter-of-an-immigrant-back.JPG"
   },
   {
     name: "Grito de Lares Pin",
