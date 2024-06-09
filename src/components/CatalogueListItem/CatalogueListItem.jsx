@@ -19,6 +19,8 @@ export default function ItemCard({ item }) {
                   alt={item.photo_alt}
                   className="group-hover:hidden h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
+                </div>
+                <div className="second hidden group-hover:block">
                 <img
                   src={item.photo_1}
                   alt={item.photo_alt}
