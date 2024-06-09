@@ -28,7 +28,7 @@ export default function ItemCard({ item }) {
                   />
                 </div>
                 </div>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-0 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
                     <a href={item.href}>

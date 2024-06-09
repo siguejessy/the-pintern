@@ -7,7 +7,6 @@ import ShopPage from '../ShopPage/ShopPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
-import Header from '../../components/Header/Header';
 import CataloguePage from '../CataloguePage/CataloguePage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 
@@ -18,7 +17,6 @@ export default function App() {
 
   return (
     <main className="App">
-    <Header />
       <NavBar user={ user } setUser={ setUser } />
       <>
       <Routes>
