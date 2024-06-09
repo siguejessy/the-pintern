@@ -24,7 +24,6 @@ const items = [
     category: categories[0]._id,
     subCategory: subCategories[0]._id,
     photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/maktub-black.jpg",
-    photo_1: ""
   },
   
   {
