@@ -75,7 +75,7 @@ import {
   TransitionChild,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Header from '../TypeLogo/TypeLogo'
+import { Link } from 'react-router-dom'
 
 
 const navigation = {
@@ -138,10 +138,10 @@ export default function NavBar( { user, setUser}) {
                 </div>
 
                 {/* Links */}
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+                <div className="-m-2 space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root px-4 py-6">
-                      <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                      <a href={page.href} className="m-2 block p-2 font-medium text-gray-900">
                         {page.name}
                       </a>
                     </div>
@@ -152,11 +152,6 @@ export default function NavBar( { user, setUser}) {
                   <div className="flow-root">
                     <a href="/login" className="-m-2 block p-2 font-medium text-gray-900">
                       Log in
-                    </a>
-                  </div>
-                  <div className="flow-root">
-                    <a href="/signup" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create account
                     </a>
                   </div>
                 </div>
@@ -174,7 +169,7 @@ export default function NavBar( { user, setUser}) {
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200">
+          <div className= "pb-4 border-b border-gray-200">
             <div className="flex h-16 items-center">
               <button
                 type="button"
@@ -187,65 +182,42 @@ export default function NavBar( { user, setUser}) {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0 pr-6 pt-8">
-                <a href="/shop">
+              <div className="ml-4 flex lg:ml-0 pr-6 pt-4">
+                <a 
+                className='flex items-center'
+                href="/shop">
                   <span className="sr-only">The Pintern</span>
                   <img
-                    className="h-16 w-fixed mt-auto"
+                    className="h-12 md:w-auto"
                     src={Logo}
                     alt=""
                   />
+                <div className="items-center justify-center pl-4 pb-4 ">
+                <TypeLogo/>
+                </div>
                 </a>
-                <TypeLogo />
               </div>
 
-              {/* Flyout menus */}
-           
 
+              {/* Flyout menus */}
+
+              <div className="mt-12 ml-auto flex items-center">
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {navigation.pages.map((page) => (
                     <a
-                      key={page.name}
-                      href={page.href}
-                      className="hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
+                    key={page.name}
+                    href={page.href}
+                    className="hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
                     </a>
                   ))}
-                </div>
-
-
-              <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a href="login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Log in
                   </a>
-                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="signup" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Create account
-                  </a>
+                  </div>
                 </div>
-
-              
-
-                {/* Search */}
-                <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                  </a>
-                </div>
-
-                {/* Cart */}
-                {/* <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
-                    <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div> */}
               </div>
             </div>
         </nav>
