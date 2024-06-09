@@ -4,7 +4,11 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'cooper': ['cooper-black-std', 'serif']
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

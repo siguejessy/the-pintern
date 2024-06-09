@@ -24,6 +24,7 @@ const items = [
     category: categories[0]._id,
     subCategory: subCategories[0]._id,
     photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/maktub-black.jpg",
+    photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/maktub-red.png"
   },
   
   {
@@ -65,7 +66,7 @@ const items = [
     category: categories[0]._id,
     subCategory: subCategories[0]._id,
     photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/phenomenal-woman.png",
-    photo_1: ""
+    photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/phenomenal-woman-2.png"
   },
   {
     name: "Latina in Tech Pin",
@@ -90,7 +91,7 @@ const items = [
     category: categories[0]._id,
     subCategory: subCategories[0]._id,
     photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/wildest-dreams-gold.png",
-    photo_1: ""
+    photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/wildest-dreams-silver.png"
   },
   {
     name: "Ruff Ryders Pin",
@@ -106,7 +107,7 @@ const items = [
     category: categories[0]._id,
     subCategory: subCategories[1]._id,
     photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/knuck-if-you-buck.png",
-    photo_1: ""
+    photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/knuck-if-you-buck-2.png"
   },
   {
     name: "SNKRS Got'Em Pin",

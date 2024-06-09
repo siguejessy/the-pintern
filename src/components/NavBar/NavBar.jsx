@@ -58,6 +58,7 @@
 import { Fragment, useState } from 'react'
 import * as userService from '../../utilities/users-service'
 import Logo from '../../assets/Logo_cropped.png'
+import TypeLogo from '../TypeLogo/TypeLogo'
 import {
   Dialog,
   DialogPanel,
@@ -74,6 +75,7 @@ import {
   TransitionChild,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Header from '../TypeLogo/TypeLogo'
 
 
 const navigation = {
@@ -99,6 +101,7 @@ export default function NavBar( { user, setUser}) {
   return (
     <div className="bg-white">
       {/* Mobile menu */}
+      
       <Transition show={open}>
         <Dialog className="relative z-40 lg:hidden" onClose={setOpen}>
           <TransitionChild
@@ -164,7 +167,7 @@ export default function NavBar( { user, setUser}) {
       </Transition>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="mt-0 flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           The Pintern's on break
           <br />
           & The shop is closed! 🔐
@@ -188,11 +191,12 @@ export default function NavBar( { user, setUser}) {
                 <a href="/shop">
                   <span className="sr-only">The Pintern</span>
                   <img
-                    className="h-16 w-auto"
+                    className="h-16 w-fixed mt-auto"
                     src={Logo}
                     alt=""
                   />
                 </a>
+                <TypeLogo />
               </div>
 
               {/* Flyout menus */}
