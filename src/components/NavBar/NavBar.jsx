@@ -128,12 +128,12 @@ export default function NavBar( { user, setUser }) {
                 {user ? (
               <>
               &nbsp; | &nbsp;
+            <div className="nav-welcome">
+              <p>Hi, {user.username}!</p>
+            </div>
             <Link to="/profile">My Profile</Link>
             &nbsp; | &nbsp;
             <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
-            <div className="nav-welcome">
-              <p>Welcome, {user.username}!</p>
-            </div>
             </>
                 ) : (
                   <>
@@ -203,10 +203,23 @@ export default function NavBar( { user, setUser }) {
                       {page.name}
                     </a>
                   ))}
+                  {user ? (
+                    <>
+                    <Link to="/profile">My Profile</Link>
+                    <div className="nav-welcome">
+                      <p>Hi, {user.username}!</p>
+                    </div>
+                    &nbsp; | &nbsp;
+                    <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
+                    </>
+                  ) : (
+                    <>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a href="login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Log in
                   </a>
+                  </>
+                  )}
                   </div>
                 </div>
               </div>
