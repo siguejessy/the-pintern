@@ -1,4 +1,3 @@
-import './CatalogueListItem.css';
 import { items } from '../../data/data';
 
 
