@@ -127,13 +127,13 @@ export default function NavBar( { user, setUser }) {
 
                 {user ? (
               <>
-              &nbsp; | &nbsp;
-            <div className="nav-welcome">
-              <p>Hi, {user.username}!</p>
-            </div>
+            <div className="block px-4 space-y-6 m-2 py-2 p-2 font-medium text-gray-900">
             <Link to="/profile">My Profile</Link>
-            &nbsp; | &nbsp;
-            <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
+            </div>
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              <p>Hi, {user.username}!</p>
+            <Link className="-m-2 block p-2 font-medium text-gray-900" to="" onClick={handleLogOut}>Log Out</Link>
+            </div>
             </>
                 ) : (
                   <>
@@ -206,10 +206,9 @@ export default function NavBar( { user, setUser }) {
                   {user ? (
                     <>
                     <Link to="/profile">My Profile</Link>
-                    <div className="nav-welcome">
+                    <div className="w-fix bg-gray-200 " aria-hidden="true">
                       <p>Hi, {user.username}!</p>
                     </div>
-                    &nbsp; | &nbsp;
                     <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
                     </>
                   ) : (
