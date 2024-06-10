@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/catalogue" element={<CataloguePage />} />
           <Route path="/catalogue/:id" element={<ItemDetailPage />} />
           <Route path="/login" element={<AuthPage setUser={ setUser } />} />
-          <Route path="/signup" element={<AuthPage setUser={ setUser } />} />
+          {/* <Route path="/signup" element={<AuthPage setUser={ setUser } />} /> */}
       </Routes>
       </>
     </main>
