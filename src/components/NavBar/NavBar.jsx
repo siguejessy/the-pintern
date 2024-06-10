@@ -41,20 +41,7 @@
 //   );
 // }
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
 import { Fragment, useState } from 'react'
 import * as userService from '../../utilities/users-service'
 import Logo from '../../assets/Logo_cropped.png'
@@ -90,7 +77,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar( { user, setUser}) {
+export default function NavBar( { user, setUser }) {
   const [open, setOpen] = useState(false)
 
   function handleLogOut() {
@@ -148,6 +135,18 @@ export default function NavBar( { user, setUser}) {
                   ))}
                 </div>
 
+                {user ? (
+              <>
+              &nbsp; | &nbsp;
+            <Link to="/profile">My Profile</Link>
+            &nbsp; | &nbsp;
+            <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
+            <div className="nav-welcome">
+              <p>Welcome, {user.username}!</p>
+            </div>
+            </>
+                ) : (
+                  <>
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
                     <a href="/login" className="-m-2 block p-2 font-medium text-gray-900">
@@ -155,11 +154,13 @@ export default function NavBar( { user, setUser}) {
                     </a>
                   </div>
                 </div>
-              </DialogPanel>
+                </>
+                )}
+                </DialogPanel>
             </TransitionChild>
-          </div>
-        </Dialog>
-      </Transition>
+            </div>
+            </Dialog>
+            </Transition>
 
       <header className="relative bg-white">
         <p className="mt-0 flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
