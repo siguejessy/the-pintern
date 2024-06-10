@@ -2,7 +2,6 @@
 // import * as userService from "../../utilities/users-service";
 // import "./NavBar.css";
 
-// // had to jettison the search bar and category pages for now, but keeping the code for future reference
 
 // export default function NavBar({ user, setUser }) {
 
@@ -62,19 +61,10 @@ import TypeLogo from '../TypeLogo/TypeLogo'
 import {
   Dialog,
   DialogPanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
   Transition,
   TransitionChild,
 } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 
 
@@ -199,7 +189,7 @@ export default function NavBar( { user, setUser}) {
               </div>
 
 
-              {/* Flyout menus */}
+              {/* horizontal menu */}
 
               <div className="mt-12 ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
