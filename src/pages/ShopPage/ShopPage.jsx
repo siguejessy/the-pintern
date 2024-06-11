@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 // import * as ordersAPI from '../../utilities/orders-api';
-// import './ShopPage.css';
-import CatalogueList from '../../components/CatalogueList/CatalogueList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import ItemCard from '../../components/CatalogueListItem/CatalogueListItem';

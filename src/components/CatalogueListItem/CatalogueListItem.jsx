@@ -1,7 +1,28 @@
-import { items } from '../../data/data';
+import { getAll } from '../../utilities/items-api';
+import { useEffect, useState } from 'react';
 
 
 export default function ItemCard({ item }) {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+useEffect(() => {
+  const fetchItems = async () => {
+    try {
+      const fetchedItems = await getAll();
+      setItems(fetchedItems);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      setError('Failed to fetch products. Please try again later.');
+      setLoading(false);
+    }
+  };
+
+  fetchItems();
+}, []);
+
 
   return (
     <div className="bg-white">
@@ -44,5 +65,5 @@ export default function ItemCard({ item }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
