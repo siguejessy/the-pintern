@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
@@ -14,23 +14,27 @@ import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-
   return (
     <main className="App">
-      <NavBar user={ user } setUser={ setUser } />
+      { user ?
       <>
+      <NavBar user={ user } setUser={ setUser } />
       <Routes>
-          <Route path="/" element={<ShopPage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/catalogue" element={<CataloguePage />} />
-          <Route path="/catalogue/:id" element={<ItemDetailPage />} />
+          <Route path="/*" element={<Navigate to="/login" />} />
+          {/* <Route path="/" element={<ShopPage />} /> */}
+          <Route path="/shop" element={<ShopPage setUser={ setUser } />} />
+          <Route path="/about" element={<AboutPage setUser={ setUser } />} />
+          <Route path="/contact" element={<ContactPage setUser={ setUser } />} />
+          <Route path="/catalogue" element={<CataloguePage setUser={ setUser } />} />
+          <Route path="/catalogue/:id" element={<ItemDetailPage setUser={ setUser } />} />
           <Route path="/login" element={<AuthPage setUser={ setUser } />} />
           {/* <Route path="/signup" element={<AuthPage setUser={ setUser } />} /> */}
-      </Routes>
-      </>
-    </main>
+          </Routes>
+          </>
+          :
+          <AuthPage setUser={ setUser } />
+          }
+          </main>
   );
 }
 
