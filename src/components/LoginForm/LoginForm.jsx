@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import * as userService from '../../utilities/users-service';
 import Logo from '../../assets/Logo_cropped.png';
+import TypeLogoXL from '../TypeLogo/TypeLogoXL'
 
 
 export default function LoginForm({ setUser }) {
@@ -35,16 +36,18 @@ export default function LoginForm({ setUser }) {
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-            className="md:w-auto items-center justify-center mx-auto w-auto h-32"
+          <img
+            className="h-64 md:w-auto items-center justify-center mx-auto"
             src={Logo}
             alt=""
           />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            The Pintern
-          </h2>
-            <h3>...is on break!</h3>
         </div>
+          <h2 className="text-center">
+                <TypeLogoXL />
+          </h2>
+            <h3 className="justify-right">
+            ...is on break!
+            </h3>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -70,7 +73,7 @@ export default function LoginForm({ setUser }) {
             <div>
               <div className="flex items-center justify-between">
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  Password
+                  Guest Password
                 </label>
               </div>
               <div className="mt-2">
@@ -97,9 +100,6 @@ export default function LoginForm({ setUser }) {
             </div>
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
-           The shop's closed, but you may enter using the guest password.
-          </p>
         </div>
       </div>
     </>
