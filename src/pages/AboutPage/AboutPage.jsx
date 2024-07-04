@@ -63,92 +63,57 @@ export default function AboutPage() {
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <ul role="list" className="mt-4 space-y-2 text-gray-600">
                 <li className="flex gap-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
-                  </svg>
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Based in Long Island, NY 🏖️🗽
+                    🏖️🗽 Based in Long Island, NY
                     </strong>{" "}
                   </span>
                 </li>
-
-                <ul className="flex gap-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
-                  </svg>
+                <li className="flex gap-x-3">
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      👩🏼‍💻 Developer by day & night
-                      <li>🕸️ Design generalist</li>
+                      👩🏼‍💻🧰 Developer by day & night
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      ✏️🕸️ Design generalist
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      📔💡 A book & a blog inspired the creation of this shop
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      🎁🔦 Featured on BuzzFeed & MiTu
+                    </strong>{" "}
+                  </span>
+                </li>
+                <ul className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      🧷📍Community Vendor @ 
+                      <li>
+                      Bronx Night Market, Colored Colors LI Art Marketplace, College Campus Events
+                      </li>
                     </strong>{" "}
                   </span>
                 </ul>
-
                 <li className="flex gap-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
-                  </svg>
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      📔 A book inspired the start of this shop
+                      📦📬 500+ Orders Shipped across 14 states
                     </strong>{" "}
                   </span>
                 </li>
-
-                <li className="flex gap-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
-                  </svg>
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Featured on BuzzFeed & MiTu
-                    </strong>{" "}
-                  </span>
-                </li>
-
-                <ul className="flex gap-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
-                  </svg>
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Community Vendor @<li>Bronx Night Market</li>
-                      <li>Colored Colors LI Art Marketplace</li>
-                      <li>College Campus Events</li>
-                    </strong>{" "}
-                  </span>
-                </ul>
               </ul>
               <br />
               <div className="mt-8 grid grid-cols-2 grid-rows-1 gap-4 sm:gap-6 lg:gap-8 -ml-8 p-8 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
