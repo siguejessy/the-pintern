@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import * as userService from '../../utilities/users-service';
 import Logo from '../../assets/Logo_cropped.png';
-import TypeLogoXL from '../TypeLogo/TypeLogoXL'
+import TypeLogoXL from '../LogoType/LogoTypeXL'
 
 
 export default function LoginForm({ setUser }) {

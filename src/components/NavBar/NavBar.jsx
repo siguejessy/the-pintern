@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import * as userService from '../../utilities/users-service'
 import Logo from '../../assets/Logo_cropped.png'
-import TypeLogo from '../TypeLogo/TypeLogo'
+import LogoType from '../LogoType/LogoType'
 import {
   Dialog,
   DialogPanel,
@@ -85,7 +85,6 @@ export default function NavBar( { user, setUser }) {
                 {user ? (
               <>
             <div className="block px-4 space-y-6 m-2 py-2 p-2 font-medium text-gray-900">
-            <Link to="/profile">My Profile</Link>
             </div>
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <p>Hi, {user.username}!</p>
@@ -141,7 +140,7 @@ export default function NavBar( { user, setUser }) {
                     alt=""
                   />
                 <div className="items-center justify-center pl-4 pb-4 ">
-                <TypeLogo/>
+                <LogoType/>
                 </div>
                 </a>
               </div>
@@ -162,11 +161,10 @@ export default function NavBar( { user, setUser }) {
                   ))}
                   {user ? (
                     <>
-                    <Link to="/profile">My Profile</Link>
-                    <div className="w-fix bg-gray-200 " aria-hidden="true">
+                    {/* <div className="w-fix" aria-hidden="true">
                       <p>Hi, {user.username}!</p>
-                    </div>
-                    <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
+                    </div> */}
+                    <Link className="logout hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800" to="" onClick={handleLogOut}>Log Out</Link>
                     </>
                   ) : (
                     <>

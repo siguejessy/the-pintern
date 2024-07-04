@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'cooper': ['cooper-black-std', 'serif']
+        'cooper': ['cooper-black-std', 'serif'],
+        'mono': ['ui-monospace', 'monospace'],
+        'noto-sans-sinhala': ['noto-sans-sinhala-semi-cond', 'sans-serif']
       },
     },
   },
