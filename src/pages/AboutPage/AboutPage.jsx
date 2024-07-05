@@ -93,6 +93,13 @@ export default function AboutPage() {
                 <li className="flex gap-x-3">
                   <span>
                     <strong className="font-semibold text-gray-900">
+                    🇸🇻 🇺🇸 Salvadoran American
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
                       🎁🔦 Featured on BuzzFeed & MiTu
                     </strong>{" "}
                   </span>

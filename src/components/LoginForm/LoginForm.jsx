@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import * as userService from '../../utilities/users-service';
-import Logo from '../../assets/Logo_cropped.png';
 import TypeLogoXL from '../LogoType/LogoTypeXL'
+import Logo from '../Logo/Logo'
 
 
 export default function LoginForm({ setUser }) {
@@ -34,13 +34,10 @@ export default function LoginForm({ setUser }) {
   }
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="h-64 md:w-auto items-center justify-center mx-auto"
-            src={Logo}
-            alt=""
-          />
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
+        <div className="sm:mx-auto sm:w-full fill-zinc-700 sm:max-w-sm
+        h-64 md:w-auto items-center justify-center mx-auto">
+          <Logo />
         </div>
           <h2 className="text-center">
                 <TypeLogoXL />

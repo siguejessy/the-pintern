@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import * as userService from '../../utilities/users-service'
-import Logo from '../../assets/Logo_cropped.png'
+import Logo from '../Logo/Logo'
 import LogoType from '../LogoType/LogoType'
 import {
   Dialog,
@@ -134,11 +134,6 @@ export default function NavBar( { user, setUser }) {
                 className='flex items-center'
                 href="/shop">
                   <span className="sr-only">The Pintern</span>
-                  <img
-                    className="h-12 md:w-auto"
-                    src={Logo}
-                    alt=""
-                  />
                 <div className="items-center justify-center pl-4 pb-4 ">
                 <LogoType/>
                 </div>
@@ -157,6 +152,9 @@ export default function NavBar( { user, setUser }) {
                     className="hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
+                      {/* <div className="hidden">
+                      <Logo />
+                      </div> //update for card navigation*/}
                     </a>
                   ))}
                   {user ? (
@@ -164,7 +162,10 @@ export default function NavBar( { user, setUser }) {
                     {/* <div className="w-fix" aria-hidden="true">
                       <p>Hi, {user.username}!</p>
                     </div> */}
-                    <Link className="logout hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800" to="" onClick={handleLogOut}>Log Out</Link>
+                    <Link 
+                    className="logout hidden sm:flex items-center text-sm font-medium px-8 text-gray-700 hover:text-gray-800" 
+                    to="" 
+                    onClick={handleLogOut}>Log Out</Link>
                     </>
                   ) : (
                     <>

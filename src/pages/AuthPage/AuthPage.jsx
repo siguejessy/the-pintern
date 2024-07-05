@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './AuthPage.css';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
-
+import background from '../../assets/background-metal.jpg';
 export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
 
