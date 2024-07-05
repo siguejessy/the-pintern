@@ -16,7 +16,7 @@ const navigation = {
   pages: [
     { name: 'Shop', href: '/shop' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Connect', href: '/connect' },
   ],
 }
 

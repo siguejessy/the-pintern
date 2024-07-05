@@ -18,13 +18,15 @@ export default function App() {
     <main className="App">
       { user ?
       <>
+
       <NavBar user={ user } setUser={ setUser } />
+
       <Routes>
           <Route path="/*" element={<Navigate to="/login" />} />
           {/* <Route path="/" element={<ShopPage />} /> */}
           <Route path="/shop" element={<ShopPage setUser={ setUser } />} />
           <Route path="/about" element={<AboutPage setUser={ setUser } />} />
-          <Route path="/contact" element={<ContactPage setUser={ setUser } />} />
+          <Route path="/connect" element={<ContactPage setUser={ setUser } />} />
           <Route path="/catalogue" element={<CataloguePage setUser={ setUser } />} />
           <Route path="/catalogue/:id" element={<ItemDetailPage setUser={ setUser } />} />
           <Route path="/login" element={<AuthPage setUser={ setUser } />} />
