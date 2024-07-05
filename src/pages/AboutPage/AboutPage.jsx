@@ -4,53 +4,48 @@ import ReviewsBlurb from "../../components/ReviewsBlurb/ReviewsBlurb";
 
 export default function AboutPage() {
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-20 lg:overflow-visible lg:px-0">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+    <div className="relative isolate overflow-hidden bg-white px-6 py-4 sm:py-20 lg:overflow-visible lg:px-0">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-8">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <section className="text-xl leading-8 text-gray-700">
-                Greetings from the Pintern! This shop first opened in 2019 as a
-                passion project to feed multiple curiosities, passions, and the
-                wallet 😉
+                Hello, I'm Jessica! This shop first opened in 2019 as a
+                passion project to practice and improve my design skills.
                 <br />
                 <br />
-                Named the Pintern as a pun because this e-commerce & product
-                design space was new and exciting to me. I wanted to be cleverly
-                associated to the very thing I’d specialize in. Everyday
-                brought, and continues to bring, an opportunity to learn and
-                improve along fellow pin-slingers, small business owners,
-                graphic & product designers, friends. I’ve enjoyed branding,
-                designing physical products, and now solving problems with code
-                thanks to The Pintern.
+                Swiftly named the Pintern after a quick poll amongst friends.
+                The name represented ecommerce & design 
+                being new and exciting spaces for me, and of course that I'm into pins! Everyday
+                continues to bring opportunities for learning and
+                improvement. The Pintern is a space for me to deliberately practice, create, and play.
+                I'm so grateful for the support received.
                 <br />
-                <br />I take a lot of joy from the process of ideation and
-                creating, whether it be in the physical space as pins or in the
-                digital space as this website. These pins are, more than
+                <br />These pins are, more than
                 anything, for humans that enjoy *the process* and for the lovers
                 of creating & creators.
               </section>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 -ml-8 p-8 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 p-4 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
-            src={LogoMemoji}
-            alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-none"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/jess-1.png"
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100"
           />
           <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/jess-2.png"
+            alt="Top down view of walnut card tray with embedded magnets and card groove."
+            className="rounded-lg bg-gray-100"
+          />
+          <img
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/jess-3.png"
             alt="Side of walnut card tray with card groove and recessed card area."
             className="rounded-lg bg-gray-100"
           />
           <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/jess-4.png"
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
             className="rounded-lg bg-gray-100"
           />
@@ -72,6 +67,13 @@ export default function AboutPage() {
                 <li className="flex gap-x-3">
                   <span>
                     <strong className="font-semibold text-gray-900">
+                    🇸🇻 🇺🇸 Salvadoran American
+                    </strong>{" "}
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span>
+                    <strong className="font-semibold text-gray-900">
                       👩🏼‍💻🧰 Developer by day & night
                     </strong>{" "}
                   </span>
@@ -86,14 +88,7 @@ export default function AboutPage() {
                 <li className="flex gap-x-3">
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      📔💡 A book & a blog inspired the creation of this shop
-                    </strong>{" "}
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                    🇸🇻 🇺🇸 Salvadoran American
+                      📔💡 Creation of this shop was inspired by a book & blog
                     </strong>{" "}
                   </span>
                 </li>
@@ -123,18 +118,16 @@ export default function AboutPage() {
                 </li>
               </ul>
               <br />
-              <div className="mt-8 grid grid-cols-2 grid-rows-1 gap-4 sm:gap-6 lg:gap-8 -ml-8 p-8 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
-            src={LogoMemoji}
-            alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-none"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/display-sketch.png"
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100"
           />
-        </div>
+          <img
+            src="https://the-pintern.s3.us-east-2.amazonaws.com/assets/display-actual.png"
+            alt="Top down view of walnut card tray with embedded magnets and card groove."
+            className="rounded-lg bg-gray-100"
+          />
             </div>
           </div>
         </div>
