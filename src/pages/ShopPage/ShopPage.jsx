@@ -55,11 +55,11 @@ export default function ShopPage({ user, setUser }) {
   return (
     <>
       <aside>
-        <CategoryList
+        {/* <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
-        />
+        /> */}
       </aside>
       <main>
       <ItemCard

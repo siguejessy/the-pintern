@@ -128,7 +128,7 @@ export default function AboutPage() {
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100"
           />
-            </div>
+            </div>
           </div>
         </div>
       </div>

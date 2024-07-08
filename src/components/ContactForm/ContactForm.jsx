@@ -1,6 +1,7 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function ContactForm() {
+  
   return (
     <form>
         <h2 className="font-noto-sans-sinhala tracking-wide font-bold text-3xl text-zinc-800 sm:text-4xl">

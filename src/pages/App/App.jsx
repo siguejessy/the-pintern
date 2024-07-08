@@ -9,6 +9,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
 import CataloguePage from '../CataloguePage/CataloguePage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -36,6 +37,7 @@ export default function App() {
           :
           <AuthPage setUser={ setUser } />
           }
+          <Footer />
           </main>
   );
 }
