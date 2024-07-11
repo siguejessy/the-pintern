@@ -43,7 +43,7 @@ export default function LoginForm({ setUser }) {
                 <TypeLogoXL />
           </h2>
             <h3 className="justify-right">
-            ...is on break!
+             🚧 is undergoing maintenance 🚧
             </h3>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
