@@ -1,32 +1,33 @@
 import { useState, useEffect, useRef } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
+import './NewOrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../../components/Logo/Logo';
 import CatalogueList from '../../components/CatalogueList/CatalogueList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
-import CatalogueListItem from '../../components/CatalogueListItem/CatalogueListItem';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
-
-export default function ShopPage({ user, setUser }) {
+export default function NewOrderPage({ user, setUser }) {
   const [catalogueItems, setCatalogueItems] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [bag, setBag] = useState(null);
   const categoriesRef = useRef([]);
-  const subCategoriesRef = useRef([]);
   const navigate = useNavigate();
 
+  // The empty dependency array causes the effect
+  // to run ONLY after the FIRST render
   useEffect(function() {
     async function getItems() {
       const items = await itemsAPI.getAll();
       categoriesRef.current = [...new Set(items.map(item => item.category.name))];
-      subCategoriesRef.current = [...new Set(items.map(item => item.subCategory.name))];
       setCatalogueItems(items);
       setActiveCat(categoriesRef.current[0]);
     }
     getItems();
 
-  //   // Load bag (a bag is the unpaid order for the logged in user)
+    // Load shopping bag/cart (Shopping Cart is the unpaid order for the logged in user)
     async function getBag() {
       const bag = await ordersAPI.getBag();
       setBag(bag);
@@ -36,9 +37,9 @@ export default function ShopPage({ user, setUser }) {
 
   /*--- Event Handlers ---*/
   async function handleAddToOrder(itemId) {
-    // 1. Call the addItemToBag function in ordersAPI, passing to it the itemId, and assign the resolved promise to a variable named cart.
+    // 1. Call the addItemToCart function in ordersAPI, passing to it the itemId, and assign the resolved promise to a variable named bag.
     const updatedBag = await ordersAPI.addItemToBag(itemId);
-    // 2. Update the cart state with the updated cart received from the server
+    // 2. Update the bag state with the updated bag received from the server
     setBag(updatedBag);
   }
 
@@ -52,19 +53,28 @@ export default function ShopPage({ user, setUser }) {
     navigate('/orders');
   }
 
+
   return (
-    <main>
+    <main className="NewOrderPage">
       <aside>
+        <Logo />
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
+        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
+        <UserLogOut user={user} setUser={setUser} />
       </aside>
       <CatalogueList
         catalogueItems={catalogueItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-        />
+      />
+      <OrderDetail
+        order={bag}
+        handleChangeQty={handleChangeQty}
+        handleCheckout={handleCheckout}
+      />
     </main>
   );
-  }
+}

@@ -7,8 +7,7 @@ const User = require('./models/user');
 const Item = require('./models/item');
 const Category = require('./models/category');
 const SubCategory = require('./models/subCategory');
-
-// const Order = require('./models/order');
+const Order = require('./models/order');
 
 // Local variables will come in handy for holding retrieved documents
 let user, item, category, subCategory, order;
