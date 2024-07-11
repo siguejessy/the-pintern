@@ -2,6 +2,6 @@ import './LogoType.css';
 
 export default function LogoType() {
   return (
-    <h1 className="mt-4 tracking-wide font-cooper text-5xl md:text-6xl lg:text-7xl text-zinc-800">The Pintern</h1>
+    <h1 className="mt-4 tracking-wide font-cooper text-5xl md:text-6xl text-zinc-800">The Pintern</h1>
   );
 }
