@@ -10,9 +10,9 @@ const Item = require('./models/item');
   await Category.deleteMany({});
   const categories = await Category.create([
     {name: 'Pins', sortOrder: 10},
-    {name: 'Stickers', sortOrder: 20},
-    {name: 'Patches', sortOrder: 30},
-    {name: 'Wooden Items', sortOrder: 40},
+    // {name: 'Stickers', sortOrder: 20},
+    // {name: 'Patches', sortOrder: 30},
+    // {name: 'Wooden Items', sortOrder: 40},
   ]);
 
   await SubCategory.deleteMany({});
@@ -20,11 +20,11 @@ const Item = require('./models/item');
     {name: 'Words & Phrases', category: categories[0]._id},
     {name: 'Music', category: categories[0]._id},
     {name: 'LatinX', category: categories[0]._id},
-    {name: 'Sororities', category: categories[0]._id},
-    {name: 'Keychains', category: categories[3]._id},
-    {name: 'Magnets', category: categories[3]._id},
-    {name: 'Ornaments', category: categories[3]._id},
-    {name: 'Signs', category: categories[3]._id},
+    // {name: 'Sororities', category: categories[0]._id},
+    // {name: 'Keychains', category: categories[3]._id},
+    // {name: 'Magnets', category: categories[3]._id},
+    // {name: 'Ornaments', category: categories[3]._id},
+    // {name: 'Signs', category: categories[3]._id},
   ]);
 
   await Item.deleteMany({});
@@ -159,74 +159,74 @@ const Item = require('./models/item');
       photo_cover: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/ojala-black.JPG",
       photo_1: "https://the-pintern.s3.us-east-2.amazonaws.com/pins/ojala-back.JPG"
     },
-    {
-      name: "OPBSI Diversity Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-      photo_cover: ""
-    },
-    {
-      name: "OPBSI Varsity Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "OPBSI Hummingbird Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LTA Moon Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LTA Letters Pin",
-      price: 12,
-      color_variants: ["grey on burgundy", "burgundy on grey"],
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LTA Block Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LPiU Year Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LPiU Founders Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LPiU Letters Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LPiU Diva Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
-    {
-      name: "LPiU CADyO Pin",
-      price: 12,
-      category: categories[0]._id,
-      subCategory: subCategories[3]._id,
-    },
+    // {
+    //   name: "OPBSI Diversity Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    //   photo_cover: ""
+    // },
+    // {
+    //   name: "OPBSI Varsity Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "OPBSI Hummingbird Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LTA Moon Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LTA Letters Pin",
+    //   price: 12,
+    //   color_variants: ["grey on burgundy", "burgundy on grey"],
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LTA Block Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LPiU Year Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LPiU Founders Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LPiU Letters Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LPiU Diva Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
+    // {
+    //   name: "LPiU CADyO Pin",
+    //   price: 12,
+    //   category: categories[0]._id,
+    //   subCategory: subCategories[3]._id,
+    // },
   ]);
 
   console.log(items)
