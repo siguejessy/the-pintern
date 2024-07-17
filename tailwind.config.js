@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('autoprefixer'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
   ],
