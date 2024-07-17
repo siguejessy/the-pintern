@@ -75,6 +75,14 @@ The website was deployed using Heroku CLI using a Squarespace managed domain. Yo
 - [x] readme.md update :tada:
 - [x] Heroku deployment
 - [ ] [new feature] item detail page
+<!-- click on each item -->
+<!-- url is shop/:item_id (object id)-->
+<!-- get/show one by :id-->
+<!-- Item title, price, description, color variants-->
+
+<!-- Breadcrumb nav -->
+<!--  -->
+<!--  -->
 - [ ] [new feature] footer
   - [ ] convert contact page to footer component
 - [ ] [new feature] shopping cart
