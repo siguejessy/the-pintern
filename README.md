@@ -74,6 +74,7 @@ The website was deployed using Heroku CLI using a Squarespace managed domain. Yo
 
 - [x] readme.md update :tada:
 - [x] Heroku deployment
+  - [ ] SSL certificate troubleshoot
 - [ ] [new feature] item detail page
 <!-- click on each item -->
 <!-- url is shop/:item_id (object id)-->
@@ -96,7 +97,8 @@ The website was deployed using Heroku CLI using a Squarespace managed domain. Yo
 - [ ] interactive navbar
 - [ ] OAuth
 - [ ] stockist/vendor portal
-  
+
+<!--
 <details>
 <summary>Sanity checks</summary>
 
@@ -105,9 +107,8 @@ The website was deployed using Heroku CLI using a Squarespace managed domain. Yo
 - [ ] https://github.com/octo-org/octo-repo/issues/740
 - [ ] https://github.com/octo-org/octo-repo/issues/740
 - [ ] https://github.com/octo-org/octo-repo/issues/740
-</details>
-
-
+</details> 
+-->
 
 
 ## Wireframes
