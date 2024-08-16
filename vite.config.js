@@ -30,12 +30,12 @@ export default defineConfig(({ command, mode }) => {
           'src/**/*.svg',
         ],
       }),
+    ],
       css: {
         postcss: {
         plugins: [tailwindcss()],
         },
       },
-    ],
     assetsInclude: ['**/*.m4v'], //irrelevant for now, keeping for future reference, might help for importing into components
   };
 });
