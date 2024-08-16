@@ -22,7 +22,7 @@ The Pintern is a long term project started in 2019. This React website will enab
 ## About The Website
 The site is actively undergoing updates and feature additions as I code through common e-commerce features.
 
-The website was deployed using Heroku CLI using a Squarespace managed domain. You can visit the site using the link at the top right sidebar of this project page or by clicking [here](http://www.thepintern.co/)
+The website was deployed using Heroku CLI using a Squarespace managed domain. You can visit the site using the link at the top right sidebar of this project page or by clicking [here](https://thepintern.co/)
 
 </br>
 
