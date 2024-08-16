@@ -14,9 +14,6 @@ export default defineConfig(({ command, mode }) => {
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),
     },
-    build: {
-      outDir: 'build',
-    },
     plugins: [
       react(),
       svgr({
