@@ -3,7 +3,7 @@ import * as itemsAPI from '../../utilities/items-api';
 // import * as ordersAPI from '../../utilities/orders-api';
 import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
-import ItemCard from '../../components/CatalogueListItem/CatalogueListItem';
+import ItemCard from '../../components/ItemCard/ItemCard';
 
 
 export default function ShopPage({ user, setUser }) {

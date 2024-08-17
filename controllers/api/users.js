@@ -42,7 +42,7 @@ function checkToken(req, res) {
 function createJWT(user) {
   return jwt.sign(
   { user },
-  process.env.SECRET,
+  import.meta.env.SECRET,
   { expiresIn: '24h' }
   );
 }

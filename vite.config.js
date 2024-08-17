@@ -11,6 +11,12 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
+    base: './',
+    resolve: {
+      alias: {
+        '~': path.resolve(__dirname, './src'),
+      },
+    },
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),
     },
